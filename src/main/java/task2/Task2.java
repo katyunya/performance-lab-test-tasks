@@ -4,16 +4,12 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Task2 {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Write path to points file:");
-    String pointsFile = scanner.nextLine();
-    System.out.println("Write path to circle file:");
-    String circleFile = scanner.nextLine();
+    String circleFile = args[0];
+    String pointsFile = args[1];
     Task2 task2 = new Task2();
     try {
       task2.getPointPosition(task2.getPoints(pointsFile), task2.getCircle(circleFile));

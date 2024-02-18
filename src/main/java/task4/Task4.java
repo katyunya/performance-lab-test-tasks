@@ -5,14 +5,11 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Task4 {
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Write path to file:");
-    String file = scanner.nextLine();
+    String file = args[0];
     try {
       System.out.println(new Task4().getStepsCount(file));
     } catch (IOException e) {

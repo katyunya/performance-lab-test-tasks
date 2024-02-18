@@ -8,19 +8,14 @@ import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Queue;
-import java.util.Scanner;
 
 public class Task3 {
   private ObjectMapper objectMapper = new ObjectMapper().setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Write path to values file:");
-    String valuesFile = scanner.nextLine();
-    System.out.println("Write path to tests file:");
-    String testsFile = scanner.nextLine();
-    System.out.println("Write path to report file:");
-    String reportFile = scanner.nextLine();
+    String valuesFile = args[0];
+    String testsFile = args[1];
+    String reportFile = args[2];
     Task3 task3 = new Task3();
     try {
       task3.writeReport(reportFile, task3.getFilledTests(task3.getValues(valuesFile), task3.getTests(testsFile)));

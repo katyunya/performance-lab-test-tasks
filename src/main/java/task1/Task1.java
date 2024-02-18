@@ -2,17 +2,13 @@ package task1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Task1 {
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("Write n:");
-    String n = scanner.nextLine();
-    System.out.println("Write m:");
-    String m = scanner.nextLine();
+    String n = args[0];
+    String m = args[1];
     System.out.println(new Task1().findPath(Integer.parseInt(n), Integer.parseInt(m)));
   }
 
